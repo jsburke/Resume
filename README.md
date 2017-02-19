@@ -2,7 +2,7 @@
 
 Here you will find a recent version of my resume.
 
-## Intenttions
+## Intentions
 
 - Easy access
 - Learn to use LaTeX
