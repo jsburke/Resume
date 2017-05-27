@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper]{article}
+\documentclass[10.5pt,letterpaper]{article}
 \pagenumbering{gobble} %removes page number not needed for resume
 
 
@@ -7,14 +7,16 @@
 \newcommand{\pseudoitem}{\diamond}
 \newcommand{\vertspace}{\vspace{1.2mm}}
 \newcommand{\horzindent}{\hspace{3mm}}
-\newcommand{\minoritem}{\hspace{4.5mm} $\pseudoitem$ }
+\newcommand{\minorindent}{\hspace{4.5mm}}
+\newcommand{\minoritem}{\minorindent $\pseudoitem$ }
 \newcommand{\latex}{\LaTeX\space}
+\newcommand{\tablewidth}{.85\linewidth}
 
 \usepackage{tcolorbox}
 \newtcolorbox{heading}[3][boxsep=1pt,left=3pt,right=2pt,top=2pt,bottom=2pt]
 {
-  colframe = #2!75,
-  colback  = #2!10,
+  colframe = #2!85,
+  colback  = #2!15,
   coltitle = #2!20!black
   #1,
 }
@@ -75,34 +77,34 @@
 	\begin{heading}{gray}
 		\textbf{Education}
 	\end{heading}
-		\begin{tabular}{l}
+		\begin{tabular*}{\tablewidth}{@{\extracolsep{\fill}}l}
 			\grad\space\gradschool , Boston, MA \\
 			Master of Engineering in \gradmajor , \gradend \\
 			GPA -- $3.26 / 4.0$ \\
 			Bachelor of Science in \undergradmajor , \undergradend \\
 			GPA -- $3.05 / 4.0$ \\
-		\end{tabular}
+		\end{tabular*}
 	
 	\vertspace
 	\noindent	
 	\begin{heading}{gray}
 		\textbf{Relevant Coursework}
 	\end{heading}
-		\begin{tabular}{ll}
+		\begin{tabular*}{\tablewidth}{@{\extracolsep{\fill}}ll}
 			Computer Architecture & High Performance Programming \\
 			Embedded Systems      & Machine Learning \\
 			Digital Design with Verilog and FPGAs & Analog VLSI Circuit Design \\
-		\end{tabular}
+		\end{tabular*}
 		
 	\vertspace
 	\noindent
 	\begin{heading}{gray}
 		\textbf{Work and Research Experience} 
 	\end{heading}
-		\begin{tabular}{l}
+		\begin{tabular*}{\tablewidth}{@{\extracolsep{\fill}}l}
 			\grad , Boston, MA, May 2017 to present\\
 			\horzindent Research with BU ICSG\\
-			\minoritem Working to implement the RISC-V based Berkely Out of Order Machine on FPGA\\
+			\minoritem Working to implement the RISC-V Berkely Out of Order Machine on FPGA\\
 			Meditech, Framingham, MA, November 2011 to January 2017\\
 			\horzindent System Analyst and Tool Development \\
 			\minoritem Developed TruCode Interface, in-house portion of the Site Information Retrieval Tool, other tools \\
@@ -111,25 +113,37 @@
 			\horzindent Undergraduate Teaching Assistant \\
 			\minoritem Assisted Professor teaching MATLAB to Engineering students \\
 			\minoritem Graded exams and quizzes, managed labs, recitations, and office hours \\
-		\end{tabular}
+		\end{tabular*}
 		
 	\vertspace
 	\noindent
 	\begin{heading}{gray}
 		\textbf{Relevant Projects}
 	\end{heading}
+	\begin{tabular*}{\tablewidth}{@{\extracolsep{\fill}}l}
+		\grad Computer Architecture Multicore Tiny RISC-V Processor\\
+		\minoritem Made a Quadcore CPU in Verilog using a restricted RISC-V ISA, private L1i caches, shared L1d\\
+		\minoritem Verified with PyMTL by cross-compiling a parallel hybrid Merge-Quick sort written in C\\
+		MEDITECH Site Information Retrieval Tool (SIRT) and TruCode Interface\\
+		\minoritem SIRT - Designed tools to decrypt and trend data for early issue detection on servers at hospitals\\
+		\minoritem TruCode - DLL to let Meditech operate with TruCode's coding and billing software\\
+		\undergrad\space Capstone, Magnetic Environment Sensor for the Naval Undersea Warfare Center\\
+		\minoritem Team project to create a device to sample and process magnetic fields and return frequency content\\
+		\minoritem Project started with initial design phases until a functional prototype\\
+	\end{tabular*}
 	
 	\vertspace
 	\noindent
 	\begin{heading}{gray}
 		\textbf{Technical Skills}
 	\end{heading}
-	\begin{tabular}{l|l}
+	\begin{tabular*}{\tablewidth}{@{\extracolsep{\fill}}l|l}
 		\textbf{Languages} & C/C++, Verilog, CUDA, Python, Perl, MATLAB, ATS, \\
 		  & Assembly (x86, ARM, RISC-V) \\ \hline %moved down a line for neatness
-		\textbf{Software} & Cadence, Xilinx ISE, PyMTL, Visual Studio, Windbg, \latex, SPIM, Valgrind \\ \hline
+		\textbf{Software} & Xilinx ISE, PyMTL, Visual Studio, Windbg, \latex, SPIM, Valgrind, \\
+		  \textbf{And Tools}& Cadence, gdb, gtkwave\\ \hline
 		\textbf{Other} & Strong Experience with Linux and Windows, Synthesis targeting FPGAs
-	\end{tabular}
+	\end{tabular*}
 	
 	\vertspace
 	\noindent
