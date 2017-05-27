@@ -1,33 +1,99 @@
-\documentclass[11pt,letterpaper]{res}
+\documentclass[11pt,letterpaper]{article}
+\pagenumbering{gobble} %removes page number not needed for resume
 
+%commands for spacing and polish
+\newcommand{\setmargin}{0.85in}
+\newcommand{\pseudoitem}{\diamond}
+\newcommand{\vertspace}{\vspace{2mm}}
+\newcommand{\horzindent}{\hspace{3mm}}
+\newcommand{\minoritem}{\hspace{4.5mm} $\pseudoitem$ }
 
-\title{John S. Burke Resume}
+%commands for stuff that is updated frequently or templated
+\newcommand{\name}{John Sarris Burke}
+\newcommand{\address}{123 Fake Street, Bozotown MA 02062}
+\newcommand{\phone}{555-555-5555}
+\newcommand{\email}{jsburke@bu.edu}
+\newcommand{\github}{jsburke}
+\newcommand{\linkdin}{John Burke}
+\newcommand{\undergrad}{Boston University}
+\newcommand{\undergradschool}{College of Engineering}
+\newcommand{\undergradmajor}{Electrical Engineering}
+\newcommand{\undergradend}{September 2011}
+\newcommand{\grad}{Boston University}
+\newcommand{\gradschool}{College of Engineering}
+\newcommand{\gradmajor}{Computer Engineering}
+\newcommand{\gradend}{September 2017}
 
-\date{2017-2-18}
+%commands for changing logos like email and github
+\usepackage{graphicx,calc}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\newcommand*\inlineicon[1]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
+}
 
-\author{John S. Burke}
+\newcommand{\iconemail}{\inlineicon{email-icon-2048}\space}
+\newcommand{\icongithub}{\inlineicon{GitHub-Mark-120px-plus}\space}
+\newcommand{\iconphone}{Phone: }
+\newcommand{\iconlinkdin}{LinkdIn: }
+
+\usepackage{geometry}
+	\geometry{left=\setmargin, right=\setmargin, top=\setmargin, bottom=\setmargin}
+%\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+%\setlist[itemize]{noitemsep, topsep=0pt}
 
 \begin{document}
-\name{John S. Burke}
-\address{123 Fake Street \\ Badger, TX 1179 \\ (555) 555-5555}
+	
+	%Header Centered
+	\begin{center}	
+		\textbf{\large \name}\\
+		\address\\
+		\begin{tabular}{c||c||c||c}
+			\iconphone \phone & \iconemail \email & \icongithub \github & \iconlinkdin \linkdin \\
+		\end{tabular}
+	\end{center}
 
-\begin{resume}
-\section{Education}
-Master of Engineering in Computer Engineering, September 2017 \\
-Boston University, Boston, MA \\
-GPA: 3.00
-
-Bachelor of Science in Electrical Engineering, May 2011 \\
-Boston University, Boston, MA \\
-GPA: 3.05
-
-\section{Software}
-\begin{itemize}
-\item Xilinx ISE
-\item Visual Studio
-\item Windows Debugger
-\end{itemize}
-
-\end{resume}
+	%Education
+	\noindent
+	\textbf{Education} \\
+		\begin{tabular}{l}
+			\grad\space\gradschool , Boston, MA \\
+			Master of Engineering in \gradmajor , \gradend \\
+			GPA -- $3.26 / 4.0$ \\
+			Bachelor of Science in \undergradmajor , \undergradend \\
+			GPA -- $3.05 / 4.0$ \\
+		\end{tabular}
+	
+	\vertspace
+	\noindent	
+	\textbf{Relevant Coursework}	 \\
+		\begin{tabular}{ll}
+			Computer Architecture & High Performance Programming \\
+			Embedded Systems      & Machine Learning \\
+			Digital Design with Verilog and FPGAs & Analog VLSI Circuit Design \\
+		\end{tabular}
+		
+	\vertspace
+	\noindent
+	\textbf{Work Experience} \\
+		\begin{tabular}{l}
+			Meditech, Framingham, MA, November 2011 to January 2017\\
+			\horzindent System Analyst and Tool Development \\
+			\minoritem Developed TruCode Interface, in-house portion of the Site Information Retrieval Tool, other tools \\
+			\minoritem Fixed and updated Meditech Software in C++, x86 Assembly, and Proprietary Languages \\
+			\undergrad , Boston, MA, September 2009 to May 2011 \\
+			\horzindent Undergraduate Teaching Assistant \\
+			\minoritem Assisted Professor teaching MATLAB to Engineering students \\
+			\minoritem Graded exams and quizzes, managed labs, recitations, and office hours \\
+		\end{tabular}
+		
+	\vertspace
+	\noindent
+	\textbf{Relevant Projects}
 
 \end{document}
