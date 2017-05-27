@@ -4,14 +4,11 @@
 
 %commands for spacing and polish
 \newcommand{\setmargin}{0.8in}
-% conroling the look of the colorbox
-\newcommand{\headingleft}{3pt}
-\newcommand{\headingright}{2pt}
-\newcommand{\headingvert}{2pt}
 \newcommand{\pseudoitem}{\diamond}
 \newcommand{\vertspace}{\vspace{1.2mm}}
 \newcommand{\horzindent}{\hspace{3mm}}
 \newcommand{\minoritem}{\hspace{4.5mm} $\pseudoitem$ }
+\newcommand{\latex}{\LaTeX\space}
 
 \usepackage{tcolorbox}
 \newtcolorbox{heading}[3][boxsep=1pt,left=3pt,right=2pt,top=2pt,bottom=2pt]
@@ -100,9 +97,12 @@
 	\vertspace
 	\noindent
 	\begin{heading}{gray}
-		\textbf{Work Experience} 
+		\textbf{Work and Research Experience} 
 	\end{heading}
 		\begin{tabular}{l}
+			\grad , Boston, MA, May 2017 to present\\
+			\horzindent Research with BU ICSG\\
+			\minoritem Working to implement the RISC-V based Berkely Out of Order Machine on FPGA\\
 			Meditech, Framingham, MA, November 2011 to January 2017\\
 			\horzindent System Analyst and Tool Development \\
 			\minoritem Developed TruCode Interface, in-house portion of the Site Information Retrieval Tool, other tools \\
@@ -118,5 +118,25 @@
 	\begin{heading}{gray}
 		\textbf{Relevant Projects}
 	\end{heading}
+	
+	\vertspace
+	\noindent
+	\begin{heading}{gray}
+		\textbf{Technical Skills}
+	\end{heading}
+	\begin{tabular}{l|l}
+		\textbf{Languages} & C/C++, Verilog, Assembly (x86, ARM, RISC-V), Python, Perl, CUDA, MATLAB, ATS \\
+		\textbf{Software} & Cadence, Xilinx ISE, PyMTL, Visual Studio, Windbg, \latex, SPIM, Valgrind \\
+		\textbf{Other} & Strong Experience with Linux and Windows, Synthesis and configuration of FPGAs
+	\end{tabular}
+	
+	\vertspace
+	\noindent
+	\begin{heading}{gray}
+		\textbf{Other Information}
+	\end{heading}
+	Served several times in Mississippi for Hurrican Katrina Relief, impoverished areas of West Virginia.
+	
+	Often assist at Saint Francis House in Boston.
 
 \end{document}
