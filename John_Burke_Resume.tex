@@ -1,12 +1,29 @@
 \documentclass[11pt,letterpaper]{article}
 \pagenumbering{gobble} %removes page number not needed for resume
 
+
 %commands for spacing and polish
-\newcommand{\setmargin}{0.85in}
+\newcommand{\setmargin}{0.8in}
+% conroling the look of the colorbox
+\newcommand{\headingleft}{3pt}
+\newcommand{\headingright}{2pt}
+\newcommand{\headingvert}{2pt}
 \newcommand{\pseudoitem}{\diamond}
-\newcommand{\vertspace}{\vspace{2mm}}
+\newcommand{\vertspace}{\vspace{1.2mm}}
 \newcommand{\horzindent}{\hspace{3mm}}
 \newcommand{\minoritem}{\hspace{4.5mm} $\pseudoitem$ }
+
+\usepackage{tcolorbox}
+\newtcolorbox{heading}[3][boxsep=1pt,left=3pt,right=2pt,top=2pt,bottom=2pt]
+{
+  colframe = #2!75,
+  colback  = #2!10,
+  coltitle = #2!20!black
+  #1,
+}
+
+\usepackage{geometry}
+	\geometry{left=\setmargin, right=\setmargin, top=\setmargin, bottom=\setmargin}
 
 %commands for stuff that is updated frequently or templated
 \newcommand{\name}{John Sarris Burke}
@@ -42,10 +59,8 @@
 \newcommand{\iconphone}{\inlineicon{phone-icon-black}\space}
 \newcommand{\iconlinkedin}{\inlineicon{linkedin-icon-black}\space}
 
-\usepackage{geometry}
-	\geometry{left=\setmargin, right=\setmargin, top=\setmargin, bottom=\setmargin}
-%\usepackage{enumitem}% http://ctan.org/pkg/enumitem
-%\setlist[itemize]{noitemsep, topsep=0pt}
+
+% Start the real document
 
 \begin{document}
 	
@@ -60,7 +75,9 @@
 
 	%Education
 	\noindent
-	\textbf{Education} \\
+	\begin{heading}{gray}
+		\textbf{Education}
+	\end{heading}
 		\begin{tabular}{l}
 			\grad\space\gradschool , Boston, MA \\
 			Master of Engineering in \gradmajor , \gradend \\
@@ -71,7 +88,9 @@
 	
 	\vertspace
 	\noindent	
-	\textbf{Relevant Coursework}	 \\
+	\begin{heading}{gray}
+		\textbf{Relevant Coursework}
+	\end{heading}
 		\begin{tabular}{ll}
 			Computer Architecture & High Performance Programming \\
 			Embedded Systems      & Machine Learning \\
@@ -80,7 +99,9 @@
 		
 	\vertspace
 	\noindent
-	\textbf{Work Experience} \\
+	\begin{heading}{gray}
+		\textbf{Work Experience} 
+	\end{heading}
 		\begin{tabular}{l}
 			Meditech, Framingham, MA, November 2011 to January 2017\\
 			\horzindent System Analyst and Tool Development \\
@@ -94,6 +115,8 @@
 		
 	\vertspace
 	\noindent
-	\textbf{Relevant Projects}
+	\begin{heading}{gray}
+		\textbf{Relevant Projects}
+	\end{heading}
 
 \end{document}
