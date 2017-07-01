@@ -5,7 +5,9 @@
 
 %commands for spacing and polish
 \newcommand{\org}[1]{\textbf{#1}}
-\newcommand{\setmargin}{0.8in}
+\newcommand{\sidemargin}{0.5in}
+\newcommand{\himargin}{0.8in}
+\newcommand{\botmargin}{0.75in}
 \newcommand{\pseudoitem}{\diamond}
 \newcommand{\vertspace}{\vspace{1.2mm}}
 \newcommand{\horzindent}{\hspace{3mm}}
@@ -24,7 +26,7 @@
 }
 
 \usepackage{geometry}
-	\geometry{left=\setmargin, right=\setmargin, top=\setmargin, bottom=\setmargin}
+	\geometry{left=\sidemargin, right=\sidemargin, top=\himargin, bottom=\botmargin}
 
 %commands for stuff that is updated frequently or templated
 \newcommand{\name}{John Sarris Burke}
@@ -44,7 +46,7 @@
 \newcommand{\gradend}{September 2017}
 
 
-\newcommand{\objective}{Computer Engineer with skills in computer architecture seeking a challenging position in processor design.}
+\newcommand{\objective}{Computer Engineer with skills in Computer Architecture seeking a challenging position in processor design.}
 
 
 %commands for changing logos like email and github
@@ -138,15 +140,15 @@
 		\textbf{Work and Research Experience} 
 	\end{heading}
 		\begin{tabular*}{\tablewidth}{@{\extracolsep{\fill}}l}
-			\org{\grad}, Boston, MA, May 2017 to Present\\
+			\org{\grad}\hfill \textbf{Boston, MA, May 2017 to Present}\\
 			\horzindent Research with BU Integrated Circuits and Systems Group (ICSG)\\
 			\minoritem Working to implement the RISC-V Berkely Out of Order Machine on FPGA with the Rocket Chip Generator\\
 			\minoritem Utilizaing and developing skills with RISC-V cross compiler, emulators, Linux, and related tools\\
-			\org{MEDITECH}, Framingham, MA, November 2011 to January 2017\\
+			\org{MEDITECH}\hfill \textbf{Framingham, MA, November 2011 to January 2017}\\
 			\horzindent System Analyst and Tool Development \\
 			\minoritem Developed TruCode Interface, in-house portion of the Site Information Retrieval Tool, other tools \\
 			\minoritem Fixed and updated Meditech Software in C++, x86 Assembly, and Proprietary Languages \\
-			\org{\undergrad}, Boston, MA, September 2009 to May 2011 \\
+			\org{\undergrad}\hfill \textbf{Boston, MA, September 2009 to May 2011}\\
 			\horzindent Undergraduate Teaching Assistant \\
 			\minoritem Assisted Professor teaching MATLAB to Engineering students \\
 			\minoritem Graded exams and quizzes, managed labs, recitations, and office hours \\
