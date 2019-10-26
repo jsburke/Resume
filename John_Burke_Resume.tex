@@ -2,6 +2,7 @@
 \pagenumbering{gobble} %removes page number not needed for resume
 
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{xcolor}
 
 %commands for spacing and polish
 \newcommand{\org}[1]{\textbf{#1}}
@@ -21,7 +22,7 @@
 {
   colframe = #2!85,
   colback  = #2!15,
-  coltitle = #2!20!black
+  coltitle = #2!20,
   #1,
 }
 
@@ -62,10 +63,10 @@
   \raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
 }
 
-\newcommand{\iconemail}{\inlineicon{email-icon-2048}\space}
-\newcommand{\icongithub}{\inlineicon{GitHub-Mark-120px-plus}\space}
-\newcommand{\iconphone}{\inlineicon{phone-icon-black}\space}
-\newcommand{\iconlinkedin}{\inlineicon{linkedin-icon-black}\space}
+\newcommand{\iconemail}{\inlineicon{images/email-icon-2048}\space}
+\newcommand{\icongithub}{\inlineicon{images/GitHub-Mark-120px-plus}\space}
+\newcommand{\iconphone}{\inlineicon{images/phone-icon-black}\space}
+\newcommand{\iconlinkedin}{\inlineicon{images/linkedin-icon-black}\space}
 
 
 % Commands to make the sections easier to move than copy paste methods
