@@ -23,39 +23,14 @@ VIEW       = evince
 #                           #
 #############################
 
-.PHONY: default
-default: show
-
-.PHONY: pdf
-pdf: $(PDF)
-
-$(PDF): *.tex 
-	make build
-	make clean
-
 .PHONY: show
 show: $(PDF)
 	$(VIEW) $(PDF) &
 
-.PHONY: build
-build: 
+$(PDF): *.tex 
+	make clean
 	$(TEX) $(TEX_FLAGS) $(SRC)
-
-.PHONY: rebuild
-rebuild:
-	make purge
-	make pdf
-
-.PHONY: reshow
-reshow: rebuild
-	make show
 
 .PHONY: clean
 clean:
-	rm -rf *.log *.aux *.dvi *.lof *.lot *.out *.toc
-
-.PHONY: purge
-purge: 
-	make clean
-	rm -rf *.pdf
-
+	rm -rf *.log *.aux *.dvi *.lof *.lot *.out *.toc *.pdf
